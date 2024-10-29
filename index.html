@@ -1,0 +1,81 @@
+<!-- おまじない系＋CSS取り込み＋Noto sansとりこみ
+     これはheadタグ内に入れるとheadタグがエラーになるよ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.ico" type="ico">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>PHOTO BOOK2</title>
+  <!-- メタタグにて検索対象から除外 -->
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+  <header class="container1">
+    <h1><a href="./index.html"><img src="./img/logo.svg" alt="logoimg"></a></h1>
+  </header>
+
+  <main id="mainvisual">
+    <img src="./img/mainvisual.jpg" alt="メインビジュアル">
+
+    <section id="index" class="container2">
+      <h2>INDEX</h2>
+      <ol>
+        <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
+        <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
+        <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
+        <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
+        <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
+      </ol>
+    </section>
+
+    <section id="PHOTO" class="container2">
+
+      <div class="img13">
+        <img src="./img/photo1.jpg" alt="画像1">
+        <img src="./img/photo3.jpg" alt="画像3">
+      </div>
+
+      <div class="img24">
+        <img src="./img/photo2.jpg" alt="画像2">
+        <img src="./img/photo4.jpg" alt="画像4">
+      </div>
+    </section>
+
+    <section id="DETAIL" class="container2">
+
+      <h2>DETAIL</h2>
+      <div class="info">
+        <div class="info1">
+          <dl>
+            <dt>著者：</dt>
+            <dd>タイトルタイトルタイトル</dd>
+
+            <dt>出版社：</dt>
+            <dd>タイトルタイトルタイトル</dd>
+
+            <dt>発行年：</dt>
+            <dd>2021年1月1日</dd>
+          </dl>
+        </div>
+
+        <div class="info2">
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <a class="text" href="#">オンラインストアで見る</a>
+        </div>
+      </div>
+
+    </section>
+
+    <footer><small>© 2021 PHOTO BOOK 2</small></footer>
+  </main>
+
+
+</body>

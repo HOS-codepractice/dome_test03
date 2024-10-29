@@ -1,0 +1,117 @@
+/* おまじない */
+@charset "UTF-8";
+
+/* notosans適用*/
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* container1にて表示範囲指定 */
+.container1 {
+  max-width: 1000px;
+  width: 200px;
+  margin: 50px 460px 20px 460px;
+}
+
+#mainvisual{
+  width: 1000px;
+  margin: 10px 460px 20px 460px;
+}
+
+.container2{
+  max-width: 800px;
+  padding-bottom: 60px;
+}
+
+#index{
+  margin: 0 auto;
+  background-color: lightgrey;
+  padding-bottom: 75px;
+}
+
+h2{
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/* list-style-insiteでブロック要素の左ではなく、項目名のすぐ左に数字を表示 */
+/* decimalはreset_cssでnoneとなった数字を表示させる項目を再度表示させる */
+.container2 li{
+  margin: 15px auto;
+  text-align: center;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+/* borderはbottomやtopを指定しなければ全方向に線を引ける */
+.container2 ol {
+  border: 1px solid black;
+  margin: 0 50px;
+}
+
+#PHOTO{
+  display: flex;
+  margin: 50px auto;
+}
+
+#DETAIL{
+background-color: lightgray;
+margin: 50px auto;
+}
+
+/* gapはコンテンツ同士の間隔を開ける。marginを使用しない方法
+★野崎先生質問内容★
+flexは出来たけどflexbasisが全くきかなかった。why
+
+.info{
+  display: flex;
+  flex-basis:50%;
+}
+
+.info1 .info2{
+  flex:1;
+  min-width: 0;
+  
+}  */
+
+/* 追加で調べて別方式を使用
+border-boxを使ったらなんか知らんがうまくいった */
+
+.info {
+  display: flex;
+}
+
+/* 子要素に直接flex-basis 
+どっちも一緒に出来なかったっけこれ？*/
+
+.info1{
+flex-basis: 30%;
+margin-left: 30px;
+
+} 
+
+.info2 {
+  flex-basis: 60%;
+  padding-left: 50px;
+  border-left: 1px solid black;
+}
+
+dd{
+  margin-bottom: 20px;
+}
+
+p{
+  margin-bottom: 30px;
+}
+
+/* aタグはmargin効かないっぽい */
+a{
+  border-bottom: 1px solid black;
+}
+
+footer{
+  text-align: center;
+}
