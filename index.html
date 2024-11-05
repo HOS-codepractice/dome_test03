@@ -17,10 +17,13 @@
 
 
 <body>
-  <header class="container1">
-    <h1><a href="./index.html"><img src="./img/logo.svg" alt="logoimg"></a></h1>
+  <header>
+    <!-- h1は必須ではない。containerで賄えるのであれば別にいらん。header内の要素が1個しか無いなら別に不要 -->
+     <!-- 同様の理由でheaderタグも必須ではない。h1があるならどっちかでいい -->
+    <a href="./index.html"><img src="./img/logo.svg" alt="logoimg"></a>
   </header>
 
+<!-- ★mainにID付けない -->
   <main id="mainvisual">
     <img src="./img/mainvisual.jpg" alt="メインビジュアル">
 
@@ -35,23 +38,23 @@
       </ol>
     </section>
 
+    <!-- クラスcontainerを広範囲に指定してその範囲を一括でマージン０　オートで中央揃えにしたりする -->
     <section id="PHOTO" class="container2">
 
       <div class="img13">
         <img src="./img/photo1.jpg" alt="画像1">
         <img src="./img/photo3.jpg" alt="画像3">
-      </div>
-
-      <div class="img24">
-        <img src="./img/photo2.jpg" alt="画像2">
-        <img src="./img/photo4.jpg" alt="画像4">
+        <img src="./img/photo2.jpg" alt="画像2" class="gazou">
+        <img src="./img/photo4.jpg" alt="画像4" class="gazou">
       </div>
     </section>
 
     <section id="DETAIL" class="container2">
 
       <h2>DETAIL</h2>
+
       <div class="info">
+      <!-- info1ではなくdlに対してclass設定をするとinfo1削減可能 -->
         <div class="info1">
           <dl>
             <dt>著者：</dt>
@@ -74,7 +77,7 @@
 
     </section>
 
-    <footer><small>© 2021 PHOTO BOOK 2</small></footer>
+    <h6>&copy; 2021 PHOTO BOOK 2</h6>
   </main>
 
 

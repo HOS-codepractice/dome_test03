@@ -7,24 +7,32 @@ body {
 }
 
 /* container1にて表示範囲指定 */
-.container1 {
+header {
   max-width: 1000px;
-  width: 200px;
-  margin: 50px 460px 20px 460px;
+  margin: 50px auto 10px auto;
 }
 
+header img{
+  width: 180px;
+}
+
+/* メインビジュアルの最大サイズを親要素の100%に指定
+これをしないと画面サイズに合わせて拡大縮小しない */
 #mainvisual{
   width: 1000px;
-  margin: 10px 460px 20px 460px;
+  margin: 10px auto 20px auto;
+  max-width: 100%;
+  height: auto;
 }
 
+/* ここにmargin0 auto入れればメインビジュアル以外全て中央揃えになる */
 .container2{
-  max-width: 800px;
+  max-width: 80%;
   padding-bottom: 60px;
+  margin: 0 auto;
 }
 
 #index{
-  margin: 0 auto;
   background-color: lightgrey;
   padding-bottom: 75px;
 }
@@ -33,31 +41,62 @@ h2{
   text-align: center;
   margin-top: 50px;
   font-weight: bold;
-  padding-top: 50px;
-  padding-bottom: 30px;
-}
-
-/* list-style-insiteでブロック要素の左ではなく、項目名のすぐ左に数字を表示 */
-/* decimalはreset_cssでnoneとなった数字を表示させる項目を再度表示させる */
-.container2 li{
-  margin: 15px auto;
-  text-align: center;
-  list-style-type: decimal;
-  list-style-position: inside;
+  padding: 50px 0 30px 0;
 }
 
 /* borderはbottomやtopを指定しなければ全方向に線を引ける */
-.container2 ol {
-  border: 1px solid black;
+/* ID指定したほうがわかりやすいよねこのhtmlってcontainer2が3つあるしね */
+#index ol {
+  margin: 0 auto;                   /* リスト全体を中央にはいち*/
+  border: 1px solid black;     
   margin: 0 50px;
+  padding: 5% 10%;
+  }
+
+
+/* list-style-insiteでブロック要素の左ではなく、項目名のすぐ左に数字を表示 */
+/* decimalはreset_cssでnoneとなった数字を表示させる項目を再度表示させる */
+#index li {
+  width: 100%;
+  list-style-type: decimal;         /* 番号付きリスト */
+  list-style-position: inside;      /* 番号をリスト項目の内側に表示 */
+  text-align: left;                 /* テキストを左揃えに */
+  margin: 15px auto;                
 }
+
 
 #PHOTO{
-  display: flex;
-  margin: 50px auto;
+  margin-top: 70px;
 }
 
+.img13{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* 最大幅はpx指定 */
+  max-width: 800px;
+  /* margin: 50px auto; */
+
+}
+#PHOTO img{
+  width: 47.5%;
+}
+
+.gazou{
+  margin-top: 30px;
+}
+
+/* レスポンシブ*/
+/* flex-flowで縦積みする */
+
+@media screen and (max-width:1024px){
+  .img13{
+     flex-flow: column;    
+   }
+  }
+
 #DETAIL{
+  max-width: 80%;
 background-color: lightgray;
 margin: 50px auto;
 }
@@ -77,19 +116,27 @@ flexは出来たけどflexbasisが全くきかなかった。why
   
 }  */
 
-/* 追加で調べて別方式を使用
-border-boxを使ったらなんか知らんがうまくいった */
+/* 追加で調べて別方式を使用 */
 
 .info {
   display: flex;
+  margin: 0 auto;
 }
+
+/* レスポンシブ*/
+/* flex-flowで縦積みする */
+
+/* @media screen and (max-width:1024px){
+  .info{
+     flex-flow: column;
+   } */
 
 /* 子要素に直接flex-basis 
 どっちも一緒に出来なかったっけこれ？*/
 
 .info1{
-flex-basis: 30%;
-margin-left: 30px;
+flex-basis: 40%;
+margin-left: 50px;
 
 } 
 
@@ -99,12 +146,18 @@ margin-left: 30px;
   border-left: 1px solid black;
 }
 
+dt{
+  width: 250px;
+}
+
 dd{
   margin-bottom: 20px;
+  width: 250px;
 }
 
 p{
   margin-bottom: 30px;
+  width: 380px;
 }
 
 /* aタグはmargin効かないっぽい */
@@ -112,6 +165,6 @@ a{
   border-bottom: 1px solid black;
 }
 
-footer{
+h6{
   text-align: center;
 }
