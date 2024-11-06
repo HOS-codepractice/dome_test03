@@ -12,13 +12,13 @@ header {
   margin: 50px auto 10px auto;
 }
 
-header img{
+header img {
   width: 180px;
 }
 
 /* メインビジュアルの最大サイズを親要素の100%に指定
 これをしないと画面サイズに合わせて拡大縮小しない */
-#mainvisual{
+#mainvisual {
   width: 1000px;
   margin: 10px auto 20px auto;
   max-width: 100%;
@@ -26,18 +26,18 @@ header img{
 }
 
 /* ここにmargin0 auto入れればメインビジュアル以外全て中央揃えになる */
-.container2{
+.container2 {
   max-width: 80%;
-  padding-bottom: 60px;
-  margin: 0 auto;
+  padding-bottom: 50px;
+  margin: 20px auto 0 auto;
 }
 
-#index{
+#index {
   background-color: lightgrey;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
 }
 
-h2{
+h2 {
   text-align: center;
   margin-top: 50px;
   font-weight: bold;
@@ -47,29 +47,33 @@ h2{
 /* borderはbottomやtopを指定しなければ全方向に線を引ける */
 /* ID指定したほうがわかりやすいよねこのhtmlってcontainer2が3つあるしね */
 #index ol {
-  margin: 0 auto;                   /* リスト全体を中央にはいち*/
-  border: 1px solid black;     
+  margin: 0 auto;
+  /* リスト全体を中央にはいち*/
+  border: 1px solid black;
   margin: 0 50px;
   padding: 5% 10%;
-  }
+}
 
 
 /* list-style-insiteでブロック要素の左ではなく、項目名のすぐ左に数字を表示 */
 /* decimalはreset_cssでnoneとなった数字を表示させる項目を再度表示させる */
 #index li {
   width: 100%;
-  list-style-type: decimal;         /* 番号付きリスト */
-  list-style-position: inside;      /* 番号をリスト項目の内側に表示 */
-  text-align: left;                 /* テキストを左揃えに */
-  margin: 15px auto;                
+  list-style-type: decimal;
+  /* 番号付きリスト */
+  list-style-position: inside;
+  /* 番号をリスト項目の内側に表示 */
+  text-align: left;
+  /* テキストを左揃えに */
+  margin: 10px auto;
 }
 
 
-#PHOTO{
+#PHOTO {
   margin-top: 70px;
 }
 
-.img13{
+.img13 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -78,28 +82,46 @@ h2{
   /* margin: 50px auto; */
 
 }
-#PHOTO img{
+
+#PHOTO img {
   width: 47.5%;
 }
 
-.gazou{
+.gazou {
   margin-top: 30px;
 }
 
 /* レスポンシブ*/
 /* flex-flowで縦積みする */
 
-@media screen and (max-width:1024px){
-  .img13{
-     flex-flow: column;    
-   }
+@media screen and (max-width:1024px) {
+  .img13 {
+    flex-flow: column;
+    align-items: center;
+    max-width: 100%;
   }
 
-#DETAIL{
-  max-width: 80%;
-background-color: lightgray;
-margin: 50px auto;
+  .gazou {
+    margin: 0;
+  }
+
+  .container2 {
+    padding-bottom: 0;
+  }
 }
+
+
+#DETAIL {
+  max-width: 80%;
+  background-color: lightgray;
+  margin: 50px auto;
+}
+
+#DETAIL h2 {
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
 
 /* gapはコンテンツ同士の間隔を開ける。marginを使用しない方法
 ★野崎先生質問内容★
@@ -123,22 +145,14 @@ flexは出来たけどflexbasisが全くきかなかった。why
   margin: 0 auto;
 }
 
-/* レスポンシブ*/
-/* flex-flowで縦積みする */
-
-/* @media screen and (max-width:1024px){
-  .info{
-     flex-flow: column;
-   } */
-
 /* 子要素に直接flex-basis 
 どっちも一緒に出来なかったっけこれ？*/
 
-.info1{
-flex-basis: 40%;
-margin-left: 50px;
-
-} 
+.info1 {
+  flex-basis: 40%;
+  margin-left: 50px;
+  background-color: lightgray;
+}
 
 .info2 {
   flex-basis: 60%;
@@ -146,25 +160,72 @@ margin-left: 50px;
   border-left: 1px solid black;
 }
 
-dt{
+@media screen and (max-width:1024px) {
+  .info {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .info1 {
+    margin: 0 auto;
+    border-bottom: 1px black solid;
+  }
+
+  .info2 {
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    padding: 0 10% 0 10%;
+  }
+
+  .info2 p {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+
+  #PHOTO img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #index {
+    padding: 20px;
+  }
+
+  #index h2 {
+    padding: 10px;
+    margin: 10px;
+  }
+
+
+
+
+
+}
+
+
+dt {
   width: 250px;
 }
 
-dd{
+dd {
   margin-bottom: 20px;
   width: 250px;
 }
 
-p{
+p {
   margin-bottom: 30px;
   width: 380px;
 }
 
 /* aタグはmargin効かないっぽい */
-a{
+a {
   border-bottom: 1px solid black;
 }
 
-h6{
+
+
+h6 {
   text-align: center;
 }
